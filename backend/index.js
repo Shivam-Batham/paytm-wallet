@@ -20,9 +20,11 @@ app.use(express.static("public"))
 
 // Routes imports
 import userRouter from "./routes/userRoutes.js"
+import accountRouter from "./routes/accountRoutes.js"
 
 //routes middleware declearation
 app.use("/api/v1/users",userRouter);
+app.use("/api/v1/account",accountRouter)
 
 app.listen(process.env.PORT || 8080,()=>{
     console.log("paytm server started...",process.env.PORT || 8080);
